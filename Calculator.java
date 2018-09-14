@@ -18,30 +18,26 @@ public class Calculator {
     System.out.println("Welcome to the Automatic Average Grading System.");
     System.out.println(" Please input any number of test scores, one at a time, and when you're done simply hit enter on an empty line.");
 
-    while (prompt) {
-      //take input
-      stringInput = scan.nextLine();
+    stringInput = scan.nextLine();
 
-      //test for blank line
-      if (stringInput.isEmpty()){
-        //stop loop
-        prompt = false;
-      } else {
-        //convert to double
-        doubleInput = Double.parseDouble(stringInput);
+    while (!(stringInput.isEmpty())) {
+      //convert to double
+      doubleInput = Double.parseDouble(stringInput);
 
-        //increase counter and add value
-        count = count + 1;
-        total = total + doubleInput;
+      //increase counter and add value
+      count = count + 1;
+      total = total + doubleInput;
 
-        //test for highest/lowest value
-        if (doubleInput > highest) {
-          highest = doubleInput;
-        }
-        if (doubleInput < lowest) {
-          lowest = doubleInput;
-        }
+      //test for highest/lowest value
+      if (doubleInput > highest) {
+        highest = doubleInput;
       }
+      if (doubleInput < lowest) {
+        lowest = doubleInput;
+      }
+
+      //take next input
+      stringInput = scan.nextLine();
     }
 
     //AFTER INPUTS

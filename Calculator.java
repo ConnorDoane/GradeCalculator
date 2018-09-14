@@ -17,6 +17,7 @@ public class Calculator {
 
     System.out.println("Welcome to the Automatic Average Grading System.");
     System.out.println(" Please input any number of test scores, one at a time, and when you're done simply hit enter on an empty line.");
+
     while (prompt) {
       //take input
       stringInput = scan.nextLine();
